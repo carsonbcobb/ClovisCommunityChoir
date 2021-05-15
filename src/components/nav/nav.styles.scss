@@ -1,0 +1,29 @@
+#nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+}
+
+.nav__logo {
+  padding: 25px 50px;
+
+  img {
+    max-width: 200px;
+  }
+}
+
+.nav__links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 50px;
+}
+
+.nav__links--link {
+  margin: 0 10px;
+  text-decoration: none;
+  color: white;
+}

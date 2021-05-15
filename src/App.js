@@ -1,68 +1,65 @@
 import YouTube from 'react-youtube';
+import React, { useEffect, useState } from 'react';
 
-import logo from './assets/nav-logo.png';
-import facebook from './assets/facebook.png';
-import youtube from './assets/youtube.png';
-import aboutImage from './assets/about.png';
-import quoteStart from './assets/quote-start.png';
-import quoteEnd from './assets/quote-end.png';
-import testimonialOne from './assets/gerald.png';
-import testimonialTwo from './assets/jessica.png';
-import testimonialThree from './assets/tom.png';
+import Nav from './components/nav/nav.jsx';
 
-import './App.css';
+import footerLogo from './assets/home/footer-logo.png';
+
+import hero from './assets/home/hero.png';
+import facebook from './assets/home/facebook.png';
+import youtube from './assets/home/youtube.png';
+import aboutImage from './assets/home/about.png';
+import quoteStart from './assets/home/quote-start.png';
+import quoteEnd from './assets/home/quote-end.png';
+import youtubeVideo from './assets/home/video.png';
+
+import arrow from './assets/home/arrow.png';
+import notes from './assets/home/join-notes.png';
+
+import SimpleSlider from './components/slider/slider.jsx';
+
+import './App.scss';
 
 function App() {
+	const [video, videoClicked] = useState('');
+
 	return (
 		<div class='body'>
-			<nav id='nav'>
-				<div class='nav__logo'>
-					<img src={logo} />
-				</div>
-				<div class='nav__links'>
-					<a href='#' class='nav__links--link'>
-						Home
-					</a>
-					<a href='#' class='nav__links--link'>
-						About
-					</a>
-					<a href='#' class='nav__links--link'>
-						Events
-					</a>
-					<a href='#' class='nav__links--link'>
-						Contact
-					</a>
-				</div>
-			</nav>
+			<div className='top-bg'>
+				<Nav />
 
-			<section id='hero'>
-				<div class='hero'>
-					<div class='hero__text'>
-						<h1 class='hero__text--title'>
-							Clovis <br /> <span class='darkblue'> Community Choir </span>
-						</h1>
-					</div>
+				<section id='hero'>
+					<div class='hero'>
+						<div class='hero__text'>
+							<h1 class='hero__text--title'>
+								Clovis <br /> <span class='darkblue'> Community Choir </span>
+							</h1>
 
-					<div class='hero__text--body'>
-						<p>
-							The Clovis Community Choir is here to provide an opportunity for
-							singers of all experience levels an encouraging and welcoming
-							environment in which to sing a variety of quality choral music.We
-							also strive to present enriching and inspiring concerts for all
-							ages in the great Clovis / Fresno community
-						</p>
-					</div>
+							<p className='hero__text--body'>
+								The Clovis Community Choir is here to provide an opportunity for
+								singers of all experience levels an encouraging and welcoming
+								environment in which to sing a variety of quality choral
+								music.We also strive to present enriching and inspiring concerts
+								for all ages in the great Clovis / Fresno community
+							</p>
 
-					<div class='hero__text--button'>
-						<a class='button' href='#'>
-							Join Now
-						</a>
+							<div className='hero-button'>
+								<a className='button' href='#'>
+									Join Now
+								</a>
+							</div>
+						</div>
+
+						<div className='hero__image'>
+							<img src={hero} />
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</div>
 
 			<section id='about'>
 				<div className='about'>
+					<p className='about__subtitle'>about</p>
 					<h2 className='about__title'>About</h2>
 
 					<div className='about__content'>
@@ -78,13 +75,26 @@ function App() {
 							</h3>
 							<p>
 								A membership of 90 plus voices, diverse experience levels and
-								one love for music and the community. Clovis Community Choir, is
-								a non-auditioned choral group established in 2014 in Clovis
-								California. Our singers range from those who are highly skilled
-								to those who have never sung in a choir before, but we all have
-								these things in common:
+								one
+								<br />
+								love for music and the community. Clovis Community Choir, is a
+								<br />
+								non-auditioned choral group established in 2014 in Clovis
+								California.
+								<br />
+								Our singers range from those who are highly skilled to those who
+								<br />
+								have never sung in a choir before, but we all have these things
+								in
+								<br />
+								common:
 							</p>
-							<a href='#' className='button' />
+
+							<div className='about-button'>
+								<a href='#' className='button'>
+									Learn More
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -96,19 +106,47 @@ function App() {
 					<h2 className='connect--title'>Connect With Us</h2>
 
 					<div className='connect__content'>
-						<div className='connect__content--video'>
-							<YouTube videoId='Cf_dXxRe7E0' />
+						<div
+							className='connect__content--video'
+							onClick={() =>
+								videoClicked(
+									<iframe
+										width='560'
+										height='415'
+										src='https://www.youtube.com/embed/Cf_dXxRe7E0?autoplay=1'
+										title='Clovis Community Choir'
+										frameborder='0'
+										allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+										allowfullscreen
+									></iframe>,
+									(document.getElementById('videoImage').style.display = 'none')
+								)
+							}
+						>
+							<img id='videoImage' src={youtubeVideo} />
+							<div className='videoPlay'>{video}</div>
 						</div>
 
 						<div className='connect__content--text'>
+							<img className='arrow' src={arrow} />
 							<h3>
 								Watch our Virtual Choir
 								<br />
 								Performance!
 							</h3>
-							<div className='connect-social'>
-								<img src={facebook} />
-								<img src={youtube} />
+							<div className='connect__social'>
+								<a
+									href='https://www.facebook.com/Clovis-Community-Choir-691609034259996/'
+									target='_blank'
+								>
+									<img src={facebook} />
+								</a>
+								<a
+									href='https://www.youtube.com/channel/UCNgI81vkZNPOXzSE3wlI3qg/videos'
+									target='_blank'
+								>
+									<img src={youtube} className='connect--yt' />
+								</a>
 							</div>
 						</div>
 					</div>
@@ -116,6 +154,7 @@ function App() {
 			</section>
 
 			<section id='join'>
+				<img src={notes} className='notes' />
 				<div className='join'>
 					<p className='join--subhead'>Come join the</p>
 					<h3 className='join--head'>Come Join the Family</h3>
@@ -127,62 +166,40 @@ function App() {
 							<br />
 							singing together!
 						</p>
-						<img src={quoteEnd} />
+						<img className='quote-end' src={quoteEnd} />
 					</div>
 				</div>
 			</section>
 
-			<section id='slider'>
-				<div className='slider'>
-					<div className='slider__container'>
-						<div className='slider__container--slide'>
-							<img className='slide--image' src={testimonialOne} />
-							<h4 className='slide--name'>Gerald M</h4>
-							<p className='slide--text'>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Tincidunt malesuada nisl quis tortor imperdiet. Nulla varius
-								fames nullam facilisi”
-							</p>
-						</div>
-
-						<div className='slider__container--slide'>
-							<img className='slide--image' src={testimonialTwo} />
-							<h4 className='slide--name'>Jessica G</h4>
-							<p className='slide--text'>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Tincidunt malesuada nisl quis tortor imperdiet. Nulla varius
-								fames nullam facilisi”
-							</p>
-						</div>
-
-						<div className='slider__container--slide'>
-							<img className='slide--image' src={testimonialThree} />
-							<h4 className='slide--name'>Tom F</h4>
-							<p className='slide--text'>
-								“Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-								Tincidunt malesuada nisl quis tortor imperdiet. Nulla varius
-								fames nullam facilisi”
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
+			<SimpleSlider />
 
 			<section id='footer'>
 				<div className='footer'>
-					<img src={logo} />
-					<p>1452 David E. Cook Way Clovis, CA 93611</p>
-					<p>Cloviscommunitychoir@gmail.com</p>
-					<p>559-327-2800</p>
+					<div className='footer__content'>
+						<img src={footerLogo} />
+						<p>1452 David E. Cook Way Clovis, CA 93611</p>
+						<p>Cloviscommunitychoir@gmail.com</p>
+						<p>559-327-2800</p>
 
-					<div className='footer__social'>
-						<img src={facebook} />
-						<img src={youtube} />
+						<div className='footer__social'>
+							<a
+								href='https://www.facebook.com/Clovis-Community-Choir-691609034259996/'
+								target='_blank'
+							>
+								<img src={facebook} />
+							</a>
+							<a
+								href='https://www.youtube.com/channel/UCNgI81vkZNPOXzSE3wlI3qg/videos'
+								target='_blank'
+							>
+								<img src={youtube} />
+							</a>
+						</div>
+
+						<a href='#' className='copyright'>
+							Carson Cobb &#169; 2021
+						</a>
 					</div>
-
-					<a href='#' className='copyright'>
-						Carson Cobb &#169; 2021
-					</a>
 				</div>
 			</section>
 		</div>
