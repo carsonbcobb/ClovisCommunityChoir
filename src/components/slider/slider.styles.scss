@@ -52,3 +52,45 @@
 .slick-active button::before {
 	color: #2569b0 !important;
 }
+
+@media (max-width: 1024px) {
+	.slide--text {
+		font-weight: normal;
+		font-size: 14px;
+		line-height: 155.6%;
+		text-align: center;
+		text-transform: capitalize;
+		color: #a2a1a1;
+		margin-top: -30px;
+		padding: 0 15px;
+	}
+
+	.slider__container {
+		margin: 0 50px;
+	}
+}
+
+@media (max-width: 768px) {
+	.center {
+		background: white;
+		box-shadow: none;
+		border-radius: 5px;
+	}
+
+	.slide--text {
+		font-weight: normal;
+		font-size: 16px;
+		line-height: 155.6%;
+		text-align: center;
+		text-transform: capitalize;
+		color: #a2a1a1;
+		margin-top: -30px;
+		padding: 0 15px;
+	}
+}
+
+@media (max-width: 425px) {
+	.slider {
+		margin-bottom: -75px;
+	}
+}

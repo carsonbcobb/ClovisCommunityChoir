@@ -1,29 +1,63 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import logo from '../../assets/home/nav-logo.png';
 
 import './nav.styles.scss';
 
-const Nav = () => (
-	<nav id='nav'>
-		<div class='nav__logo'>
-			<img src={logo} />
-		</div>
-		<div class='nav__links'>
-			<a href='#' class='nav__links--link'>
-				Home
-			</a>
-			<a href='#' class='nav__links--link'>
-				About
-			</a>
-			<a href='#' class='nav__links--link'>
-				Events
-			</a>
-			<a href='#' class='nav__links--link'>
-				Contact
-			</a>
-		</div>
-	</nav>
-);
+const Nav = () => {
+	const [toggle, setToggle] = useState(false);
+
+	return (
+		<nav id='nav'>
+			<div class='nav__logo'>
+				<img src={logo} />
+			</div>
+			<div class='nav__links'>
+				<Link to='/' class='nav__links--link'>
+					Home
+				</Link>
+				<div id='about-link' onClick={() => setToggle(!toggle)}>
+					About
+					{toggle && (
+						<div className='dropdown'>
+							<Link
+								to='/about'
+								className=' nav__links--link nav__links--link-dropdown'
+							>
+								Who We Are?
+							</Link>
+							<Link
+								to='/director'
+								className='nav__links--link nav__links--link-dropdown'
+							>
+								Our Director
+							</Link>
+							<Link
+								to='/accompanist'
+								className=' nav__links--link nav__links--link-dropdown'
+							>
+								Our Accompanist
+							</Link>
+							<Link
+								to='/history'
+								className='nav__links--link nav__links--link-dropdown'
+							>
+								Our History
+							</Link>
+						</div>
+					)}
+				</div>
+
+				<Link to='/events' class='nav__links--link'>
+					Events
+				</Link>
+				<Link to='/contact' class='nav__links--link'>
+					Contact
+				</Link>
+			</div>
+		</nav>
+	);
+};
 
 export default Nav;
