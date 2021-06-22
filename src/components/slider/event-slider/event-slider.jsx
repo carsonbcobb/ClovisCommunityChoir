@@ -1,29 +1,7 @@
 import React, { Component } from 'react';
 import Slider from 'react-slick';
+import { CloudinaryContext, Image } from 'cloudinary-react';
 import './event-slider.styles.scss';
-
-import slide1 from '../../../assets/events/perf-1.jpeg';
-import slide2 from '../../../assets/events/perf-2.jpeg';
-import slide3 from '../../../assets/events/perf-3.jpeg';
-import slide4 from '../../../assets/events/perf-4.jpeg';
-import slide5 from '../../../assets/events/perf-5.jpeg';
-import slide6 from '../../../assets/events/perf-6.jpeg';
-import slide7 from '../../../assets/events/perf-7.jpeg';
-import slide8 from '../../../assets/events/perf-8.jpeg';
-import slide9 from '../../../assets/events/perf-9.jpeg';
-import slide10 from '../../../assets/events/perf-10.jpeg';
-import slide11 from '../../../assets/events/perf-11.jpeg';
-import slide12 from '../../../assets/events/perf-12.jpeg';
-import slide13 from '../../../assets/events/perf-13.jpeg';
-import slide14 from '../../../assets/events/perf-14.jpeg';
-import slide15 from '../../../assets/events/perf-15.jpeg';
-import slide16 from '../../../assets/events/perf-16.jpeg';
-import slide17 from '../../../assets/events/perf-17.jpeg';
-import slide18 from '../../../assets/events/perf-18.jpeg';
-import slide19 from '../../../assets/events/perf-19.jpeg';
-import slide20 from '../../../assets/events/perf-20.jpeg';
-import slide21 from '../../../assets/events/perf-21.jpeg';
-import slide22 from '../../../assets/events/perf-22.jpeg';
 
 import prev from '../../../assets/events/prev.png';
 import next from '../../../assets/events/next.png';
@@ -65,167 +43,257 @@ export default class EventSlider extends Component {
 			],
 		};
 		return (
-			<section id='slider'>
-				<div className='slider'>
-					<div className='slider__container'>
-						<Slider {...settings}>
-							<div className='container'>
-								<img src={slide1} className='perf-img' />
-								<h2>Pop Goes The Choir!</h2>
-								<p>April 26, 2021</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+			<CloudinaryContext cloudName='dymy6bsv9'>
+				<section id='slider'>
+					<div className='slider'>
+						<div className='slider__container'>
+							<Slider {...settings}>
+								<div className='container'>
+									<Image
+										publicId='perf-1_vqsobd'
+										format='jpg'
+										className='perf-img'
+									/>
+									<h2>Pop Goes The Choir!</h2>
+									<p>April 26, 2021</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide2} className='perf-img' />
-								<h2>Songs of the Season</h2>
-								<p>December 15, 2019</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-2_fihzua'
+										format='jpg'
+										className='perf-img'
+									/>
+									<h2>Songs of the Season</h2>
+									<p>December 15, 2019</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide3} className='perf-img' />
-								<h2>Sacred Songs</h2>
-								<p>October 27, 2019</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-3_w9a10d'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Sacred Songs</h2>
+									<p>October 27, 2019</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide4} className='perf-img' />
-								<h2>6th Annual Patriotic Concert</h2>
-								<p>June 28, 2019</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-4_cjjhei'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>6th Annual Patriotic Concert</h2>
+									<p>June 28, 2019</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide5} className='perf-img' />
-								<h2>Show Stoppers!</h2>
-								<p>May 5, 2019</p>
-								<p>Clovis Veterans Memorial Auditorium</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-5_ihatja'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Show Stoppers!</h2>
+									<p>May 5, 2019</p>
+									<p>Clovis Veterans Memorial Auditorium</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide6} className='perf-img' />
-								<h2>Songs of the Season</h2>
-								<p>December 16, 2018</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-6_ij0kfg'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Songs of the Season</h2>
+									<p>December 16, 2018</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide7} className='perf-img' />
-								<h2>Sacred Songs</h2>
-								<p>October 21, 2018</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-7_ragmo8'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Sacred Songs</h2>
+									<p>October 21, 2018</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide8} className='perf-img' />
-								<h2>5th Annual Patriotic Concert</h2>
-								<p>June 29, 2018</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-8_c6okam'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>5th Annual Patriotic Concert</h2>
+									<p>June 29, 2018</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide9} className='perf-img' />
-								<h2>Are We There Yet?</h2>
-								<p>May 6, 2018</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-9_ejxfbd'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Are We There Yet?</h2>
+									<p>May 6, 2018</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide10} className='perf-img' />
-								<h2>Songs of the Season</h2>
-								<p>December 27, 2017</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-10_lo964o'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Songs of the Season</h2>
+									<p>December 27, 2017</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide11} className='perf-img' />
-								<h2>Sacred Songs</h2>
-								<p>October 22, 2017</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-11_jc3iyg'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Sacred Songs</h2>
+									<p>October 22, 2017</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide12} className='perf-img' />
-								<h2>Patriotic and Gospel Favorites</h2>
-								<p>June 23, 2017</p>
-								<p>Peoples Church</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-12_g7hh8i'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Patriotic and Gospel Favorites</h2>
+									<p>June 23, 2017</p>
+									<p>Peoples Church</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide13} className='perf-img' />
-								<h2>Pure Imagination: From Broadway to Hollywood</h2>
-								<p>May 7, 2017</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-13_x24dby'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Pure Imagination: From Broadway to Hollywood</h2>
+									<p>May 7, 2017</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide14} className='perf-img' />
-								<h2>Holiday Performance</h2>
-								<p>December 18, 2016</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-14_lcpx9a'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Holiday Performance</h2>
+									<p>December 18, 2016</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide15} className='perf-img' />
-								<h2>More Psalms, Hymns, and Spiritual Songs</h2>
-								<p>November 3, 2016</p>
-								<p>Paul Shaghoian Concert Hall</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-15_a7zkkq'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>More Psalms, Hymns, and Spiritual Songs</h2>
+									<p>November 3, 2016</p>
+									<p>Paul Shaghoian Concert Hall</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide16} className='perf-img' />
-								<h2>Patriotic Concert</h2>
-								<p>June 24, 2016</p>
-								<p>G.L. Johnson Chapel</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-16_koqsqu'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Patriotic Concert</h2>
+									<p>June 24, 2016</p>
+									<p>G.L. Johnson Chapel</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide17} className='perf-img' />
-								<h2>America Sings!</h2>
-								<p>May 6, 2016</p>
-								<p>G.L. Johnson Chapel</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-17_u3fusq'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>America Sings!</h2>
+									<p>May 6, 2016</p>
+									<p>G.L. Johnson Chapel</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide18} className='perf-img' />
-								<h2>Songs of the Season</h2>
-								<p>December 18, 2015</p>
-								<p>G.L. Johnson Chapel</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-18_uptucj'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Songs of the Season</h2>
+									<p>December 18, 2015</p>
+									<p>G.L. Johnson Chapel</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide19} className='perf-img' />
-								<h2>Psalms, Hymns, and Spiritual Songs</h2>
-								<p>October 30, 2015</p>
-								<p>G.L. Johnson Chapel</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-19_cvrq8c'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Psalms, Hymns, and Spiritual Songs</h2>
+									<p>October 30, 2015</p>
+									<p>G.L. Johnson Chapel</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide20} className='perf-img' />
-								<h2>Patriotic Celebration</h2>
-								<p>June 25, 2015</p>
-								<p>G.L. Johnson Chapel</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-20_oczx9r'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Patriotic Celebration</h2>
+									<p>June 25, 2015</p>
+									<p>G.L. Johnson Chapel</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide21} className='perf-img' />
-								<h2>Sing a Song of Christmas</h2>
-								<p>December 18, 2014</p>
-								<p>Mercedes Edwards Theater</p>
-							</div>
+								<div className='container'>
+									<Image
+										publicId='perf-21_x0cmhw'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Sing a Song of Christmas</h2>
+									<p>December 18, 2014</p>
+									<p>Mercedes Edwards Theater</p>
+								</div>
 
-							<div className='container'>
-								<img src={slide22} className='perf-img' />
-								<h2>Clovis Community Choir: In Concert!</h2>
-								<p>October 30, 2014</p>
-								<p>Clovis Veterans Memorial Auditorium</p>
-							</div>
-						</Slider>
+								<div className='container'>
+									<Image
+										publicId='perf-22_albdhm'
+										format='jpg'
+										className='perf-img'
+									/>{' '}
+									<h2>Clovis Community Choir: In Concert!</h2>
+									<p>October 30, 2014</p>
+									<p>Clovis Veterans Memorial Auditorium</p>
+								</div>
+							</Slider>
+						</div>
 					</div>
-				</div>
-			</section>
+				</section>
+			</CloudinaryContext>
 		);
 	}
 }
