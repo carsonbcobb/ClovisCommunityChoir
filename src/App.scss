@@ -7,3 +7,9 @@ body {
 	background-color: white;
 	margin: 0 auto;
 }
+
+body,
+html,
+.body {
+	overflow-x: hidden;
+}
