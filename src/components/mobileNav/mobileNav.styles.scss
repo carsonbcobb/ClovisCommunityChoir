@@ -3,7 +3,6 @@
 	flex-direction: row;
 	justify-content: space-between;
 	align-items: center;
-	max-width: 100%;
 }
 
 .mobile-nav__logo {
@@ -18,7 +17,6 @@
 	position: relative;
 	top: 50px;
 	left: 350px;
-
 	z-index: 1;
 
 	-webkit-user-select: none;
@@ -146,7 +144,7 @@
 	flex-direction: column;
 	justify-content: space-evenly;
 	align-items: center;
-	margin-right: 100px;
+	margin-right: 120px;
 	margin-top: -50px;
 }
 
