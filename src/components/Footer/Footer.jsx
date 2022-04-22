@@ -30,7 +30,7 @@ const Footer = () => (
 			</div>
 
 			<a href='#' className='copyright'>
-				Carson Cobb &#169; 2021
+				Carson Cobb &#169; 2022
 			</a>
 		</div>
 	</div>

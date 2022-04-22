@@ -22,10 +22,7 @@ const Director = () => {
 					</div>
 				</div>
 
-				<div className='about-section__subhead'>
-					<h2>OUR DIRECTOR</h2>
-					<img src={subhead} />
-				</div>
+				
 
 				<div className='about-section__content'>
 					<div className='about-section__content__image'>
