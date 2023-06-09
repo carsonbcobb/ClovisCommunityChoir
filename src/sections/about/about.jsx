@@ -69,8 +69,7 @@ const About = () => {
 						<p>
 							The choir rehearses weekly during its season and is broken into 3
 							segments. Late August through December, February through April,
-							and May through June. We are sponsored by Clovis Adult School
-							Community Education, and each year the Choir performs 4 major
+							and May through June. We perform 4 major
 							concerts, and various other performances around the community…and,
 							our concerts are free to the public!
 						</p>
