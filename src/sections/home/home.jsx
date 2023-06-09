@@ -183,7 +183,6 @@ const Home = () => {
 				<div className='footer'>
 					<div className='footer__content'>
 						<img src={footerLogo} />
-						<p>1452 David E. Cook Way Clovis, CA 93611</p>
 						<p>Cloviscommunitychoir@gmail.com</p>
 						<p>559-327-2800</p>
 
