@@ -40,12 +40,12 @@ const History = () => {
 						</h2>
 						<img src={underTitle} />
 						<p>
-							After years of sponsoring personal growth classes and events for
-							the Clovis/Fresno communities, the Community Education department
-							of Clovis Adult School was eager to offer a choral opportunity for
-							those who enjoy singing! Ed Cobb, a choral conductor in the area
-							for many years, was contacted and proudly accepted the “challenge”
-							to start a new choir.
+							Ed Cobb, a passionate choral conductor, independently started a new choir, driven by his love for singing and a desire to create something extraordinary. He gathered like-minded individuals, nurtured their voices, and formed a harmonious collective that captivated audiences with soul-stirring performances. His decision showcased his unwavering passion for music and belief in its transformative power, fostering a vibrant musical community.
+
+
+
+
+
 						</p>
 						<p>
 							Knowing that there is always an interest in patriotic music, it
