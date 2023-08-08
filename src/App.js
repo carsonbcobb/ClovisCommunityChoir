@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 
 import Home from './sections/home/home';
@@ -11,19 +11,11 @@ import History from './sections/history/history';
 import './App.scss';
 
 function App() {
-	return (
-		<Router>
-			<Switch>
-				<Route exact path='/' component={Home} />
-				<Route exact path='/about' component={About} />
-				<Route exact path='/director' component={Director} />
-				<Route exact path='/accompanist' component={Accompanist} />
-				<Route exact path='/history' component={History} />
-				<Route exact path='/events' component={Events} />
-				<Route exact path='/contact' component={Contact} />
-			</Switch>
-		</Router>
-	);
+	useEffect(() => {
+		window.location.href = 'https://choirofthevalley.com';
+	}, []);
+
+	return null; // No need to render anything since we are redirecting immediately
 }
 
 export default App;
